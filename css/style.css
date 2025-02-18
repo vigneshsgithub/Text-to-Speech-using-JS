@@ -1,1 +1,76 @@
-/*# sourceMappingURL=style.css.map */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: thin;
+  background: linear-gradient(to right, #1d023b, #2f0753, #45096b, #5c0b84, #75099d);
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  max-height: 100vh;
+  min-height: 80%;
+}
+
+.title {
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  color: white;
+  font-size: 28px;
+  top: 200px;
+  font-weight: 100;
+}
+
+.span-tag {
+  color: rgb(246, 54, 86);
+  border-bottom: 4px solid white;
+}
+
+.content-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.text-area-container {
+  border: none;
+  outline: none;
+  margin-top: 70px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  width: 750px;
+  height: 350px;
+  border: 1px solid #ccc;
+  padding: 15px 10px;
+  font-size: 16px;
+  border-radius: 15px;
+  text-align: start;
+}
+
+.text-area-container::-moz-placeholder {
+  color: white;
+}
+
+.text-area-container::placeholder {
+  color: white;
+}/*# sourceMappingURL=style.css.map */
