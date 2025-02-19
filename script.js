@@ -1,11 +1,21 @@
-const textField = document.getElementById("myTextField");
+let Speech = new SpeechSynthesisUtterance();
 
-// Function to set cursor position at the start
-function setCursorAtPlaceholder() {
-    textField.focus();
-    textField.setSelectionRange(0, 0); // Moves cursor to the start
-}
+let voices=[];
+let voiceSelect = document.querySelector("select");
 
-// Call function when page loads
-window.onload = setCursorAtPlaceholder;
+voiceSelect.addEventListener('change', (event) => {
+    console.log(event.target.value)
+    voices=window.speechSynthesis.getVoices();
+    Speech.voice=voices[event.target.value];
+})
+
+window.speechSynthesis.onvoiceschanged = ()=>{
+    voices=window.speechSynthesis.getVoices();
+    Speech.voice=voices[voiceSelect.selectedIndex];
+    voices.forEach((voice,i)=>(voiceSelect.options[i] = new Option(voice.name,i)));
+};
+document.querySelector("button").addEventListener('click',()=>{
+    Speech.text =document.querySelector("textarea").value;
+    window.speechSynthesis.speak(Speech);
+});
  

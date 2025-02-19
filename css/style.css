@@ -65,6 +65,7 @@ body {
   font-size: 16px;
   border-radius: 15px;
   text-align: start;
+  margin-top: 150px;
 }
 
 .text-area-container::-moz-placeholder {
@@ -73,4 +74,42 @@ body {
 
 .text-area-container::placeholder {
   color: white;
+}
+
+.Language-btn {
+  position: absolute;
+  width: 550px;
+  height: 45px;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.2);
+  left: 32rem;
+  margin-top: 30px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url("../icons8-drop-down-48.png");
+  background-size: 25px;
+  background-position-x: 97%;
+  background-position-y: 45%;
+  background-repeat: no-repeat;
+  color: white;
+  padding-left: 30px;
+  font-size: 20px;
+}
+
+.play-btn {
+  position: absolute;
+  height: 45px;
+  width: 180px;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 30px;
+  left: 68rem;
+  margin-top: 30px;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-right: 30px;
 }/*# sourceMappingURL=style.css.map */
